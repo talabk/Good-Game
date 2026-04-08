@@ -41,19 +41,16 @@ class GGApp extends StatelessWidget {
         AppRoutes.register: (context) => const RegisterPage(),
         AppRoutes.forgotPassword: (context) => const ForgotPasswordPage(),
         AppRoutes.otp: (context) => const OtpPage(),
-
         AppRoutes.home: (context) => const HomePage(),
         AppRoutes.groups: (context) => const GroupsPage(),
         AppRoutes.groupDetails: (context) {
           final group =
               ModalRoute.of(context)!.settings.arguments as Group;
-   
           return GroupDetailsPage(group: group);
-},
+        },
         AppRoutes.search: (context) => const SearchPage(),
         AppRoutes.addActivity: (context) => const AddActivityPage(),
         AppRoutes.profile: (context) => const ProfilePage(),
-
         AppRoutes.notifications: (context) => const NotificationsPage(),
         AppRoutes.chat: (context) => const ChatPage(),
         AppRoutes.settings: (context) => const SettingsPage(),
